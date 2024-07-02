@@ -25,7 +25,7 @@ do it=1,exitmax
   if ((abs(t1).ge.hd_probe)) shape_func=0d0
   if (abs(shape_func).lt.1.d-20) shape_func=0d0
   !define vector field
-  probetmp(it,:)=pol_vec_probe*field_intensity_probe*shape_func
+  probetmp(it,:)=cmplx(dble(pol_vec_probe*field_intensity_probe*shape_func),0d0)
   profile(it)=field_intensity_probe*shape_func
 enddo
 end subroutine

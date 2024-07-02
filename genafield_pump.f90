@@ -19,7 +19,7 @@ do it=1,exitmax
   if ((abs(t1).ge.hd_pump)) shape_func=0.d0
   if (abs(shape_func).lt.1.d-20) shape_func=0.d0
   !define vector field
-  pumptmp(it,:)=pol_vec_pump*field_intensity_pump*shape_func
+  pumptmp(it,:)=cmplx(dble(pol_vec_pump*field_intensity_pump*shape_func),0d0,8)
   profile(it)=field_intensity_pump*shape_func
 enddo
 end subroutine

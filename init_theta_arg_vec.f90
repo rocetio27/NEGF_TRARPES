@@ -11,7 +11,7 @@ integer :: igpz
 real(8) :: p_vec(3)
 complex(8) :: norm2_p_vec_cmplx_sq, p_vec_cmplx(3)
 complex(8) :: integrand_it, integrand_it_p_1
-!when itex equal to 0 then initialize the value of theta_arg_vec as the value at t=dt/2d0
+!when itex equal to 0 then initialize the value of theta_arg_vec as the value at t=nfr*dt/2d0
 do igpz=1,ns
   p_vec               =pp_vec+gpz_vecs(igpz,:)
 
@@ -24,6 +24,6 @@ do igpz=1,ns
   integrand_it_p_1=(norm2_p_vec_cmplx_sq/2d0-norm2(p_vec)**2/2d0)
 
   !sum of trapzoidal area to theta_arg_vec
-  theta_arg_vec(igpz)=dt/2d0*(integrand_it+integrand_it_p_1)
+   theta_arg_vec(igpz)=(dt/2d0)/2d0*(integrand_it+integrand_it_p_1)
 enddo
 end subroutine

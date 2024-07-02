@@ -9,10 +9,10 @@ SRC_main = main.f90
 
 # main subroutines and functions
 SRC_sub = \
- get_atom_pos.f90 genkline.f90 genhk.f90 \
+ get_atom_pos.f90 genkline.f90 genhk.f90 set_pulse_variables.f90\
  genafield_pump.f90 genafield_probe.f90 gengrid1d.f90 \
  nf.f90 phi_p.f90 hpp.f90 pw_coeff_bloch.f90\
- genhk_pw_basis_and_u_trans.f90\
+ genhk_pw_basis.f90 u_transform.f90\
  evolve_theta_arg_vec.f90 init_theta_arg_vec.f90
 
 SRC = $(SRC_modules) $(SRC_main) $(SRC_sub)

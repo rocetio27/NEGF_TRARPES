@@ -46,7 +46,7 @@ integer              :: nband
 ! PARAMETERS FOR PES CAL
 integer, parameter :: iorbstart=1
 logical :: lineplotmode=.true.
-integer, parameter :: nppx=45, nppy=45, nenrg=60
+integer, parameter :: nppx=45, nppy=45, nenrg=30
 
 !G-vector parameters
 integer, parameter :: ngmax=1
@@ -56,7 +56,6 @@ integer, parameter :: igc=(ngpt-1)/2+1 !center index of g-vecs
 real(8) :: g_vecs(ngpt,3)
 
 !integer, parameter :: ipzc=(npzpt-1)/2+1 !center index of pz-vecs
-!integer, parameter :: igpzc=npzpt*(igc-1)+ipzc
 
 ! ARRAYS
 real(8) :: pxg(nppx),pyg(nppy),enrg(nenrg)

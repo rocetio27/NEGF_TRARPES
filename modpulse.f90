@@ -20,7 +20,7 @@ complex(8), parameter :: rcp_pol(3)=(s_pol+ci*p_pol)/sqrt(2d0)
 
 real(8), parameter :: w_pump=0.4*eV
 real(8), parameter :: e_to_v_pump=eV/astr*137/w_pump ! E-field(eV/astr) to A-field(a.u.) unit conversion factor
-real(8), parameter :: field_intensity_pump=0.002d0*e_to_v_pump
+real(8), parameter :: field_intensity_pump=0.005d0*e_to_v_pump
 complex(8), parameter :: pol_vec_pump(3)=p_pol
 real(8), parameter :: phase_pump=0d0
 real(8), parameter :: hd_pump=20*fs ! half-duration
@@ -34,13 +34,7 @@ real(8), parameter :: e_to_v_probe=eV/astr*137/w_probe ! E-field to A-field unit
 real(8), parameter :: field_intensity_probe=0.00005d0*e_to_v_probe
 complex(8), parameter :: pol_vec_probe(3)=p_pol
 real(8), parameter :: phase_probe=0d0
-real(8), parameter :: hd_probe=40*fs ! half-duration
-
-!params of Fourier transform of vector potential
-real(8), parameter :: omega_half_range=2.35482d0**2/(2d0*pi*hd_probe)*3d0
-real(8), parameter :: dw=0.00005*eV
-integer, parameter :: nwpt=2*nint(omega_half_range/dw)+1
-complex(8)         :: afield_probe_w(nwpt)=c0
+real(8), parameter :: hd_probe=20*fs ! half-duration
 
 real(8) :: delta_t=0*fs ! delta_t=probe pusle center - pump pulse center
 real(8) :: tshift=0d0
@@ -48,5 +42,7 @@ real(8) :: tshift=0d0
 complex(8), allocatable :: pump(:,:)      ,probe(:,:)       !timeindex,vectorindex
 complex(8), allocatable :: pump_profile(:),probe_profile(:) !timeindex,vectorindex
 real(8)   , allocatable :: e_pump(:,:)    ,e_probe(:,:)     !timeindex,vectorindex
-! Circular polar inputs
+
+!integer :: nfr=floor(w_probe/w_pump) ! integer number of frequency ratio
+integer :: nfr=3 ! integer number of frequency ratio
 end module
