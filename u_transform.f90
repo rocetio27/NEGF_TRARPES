@@ -4,11 +4,10 @@ use modmain
 use modpulse
 implicit none
 integer   , intent(in)  :: ns
-complex(8), intent(in)  :: theta_arg_vec(ns)
+real(8), intent(in)  :: theta_arg_vec(ns)
 complex(8), intent(in)  :: h_k_pw(ns,ns)
 complex(8), intent(inout) :: h_k_pw_ut(ns,ns)
 integer :: i,j
-real(8) :: dble_theta_arg_vec(ns), imag_theta_arg_vec(ns)
 complex(8) :: exp_i_theta_vec(ns)
 complex(8) :: conjg_exp_i_theta_vec(ns)
 exp_i_theta_vec=cdexp(ci*theta_arg_vec)

@@ -44,12 +44,13 @@ complex(8), allocatable :: pes_t_integrand(:)
 complex(8), allocatable :: pes_t_integrand_t_p_dt(:)
 complex(8), allocatable :: pes_t_integral_val1(:)
 complex(8) :: dipole_mat_el, greater_mat_el, lesser_mat_el, greater_dagger_mat_el
-complex(8), allocatable :: theta_arg_vec(:)
+real(8), allocatable :: theta_arg_vec(:)
 complex(8), allocatable :: u_mat_greater(:,:), u_mat_greater_dagger(:,:)
 complex(8), allocatable :: u_mat_lesser(:,:)
 complex(8), allocatable :: u_mat_l_greater(:,:), u_mat_r_greater(:,:)
 complex(8), allocatable :: u_mat_l_lesser(:,:), u_mat_r_lesser(:,:)
 complex(8), allocatable :: u_mat_evolver_greater(:,:)
+complex(8), allocatable :: u_mat_evolver_nint(:,:)
 complex(8), allocatable :: u_mat_evolver_lesser(:,:)
 complex(8), allocatable :: identity_lesser(:,:)
 complex(8), allocatable :: identity_greater(:,:)
@@ -78,37 +79,36 @@ end if
 !   define in-plane p-vectors
 !*---------------------------------------------------------------------------------------------------------
 if(lineplotmode.eqv.(.true.)) then
-    nhspts=2 !!
-    allocate(hspts(nhspts,3)) !3 means px,py,pz
-    allocate(n_p_to_p_grid(nhspts-1))
+  nhspts=2 !!
+  allocate(hspts(nhspts,3)) !3 means px,py,pz
+  allocate(n_p_to_p_grid(nhspts-1))
 
-    hspts(1,:)=0.66666666d0*b_1+0.33333333d0*b_2-(/0.0d0, 0.12d0, 0.0d0/) !!
-    hspts(2,:)=0.66666666d0*b_1+0.33333333d0*b_2+(/0.0d0, 0.12d0, 0.0d0/) !!
-    write(*,*) "(info) origin_vec:", (hspts(1,:)+hspts(2,:))/2d0
-    !hspts(1,:)=-(/1.1d0, 0d0, 0.0d0/) !!
-    !hspts(2,:)= (/1.1d0, 0d0, 0.0d0/) !!
-    n_p_to_p_grid=(/48/) !!
-    nkline=sum(n_p_to_p_grid)+1
-    npppt=nkline
+  hspts(1,:)=0.66666666d0*b_1+0.33333333d0*b_2-(/0.0d0, 0.12d0, 0.0d0/) !!
+  hspts(2,:)=0.66666666d0*b_1+0.33333333d0*b_2+(/0.0d0, 0.12d0, 0.0d0/) !!
+  write(*,*) "(info) origin_vec:", (hspts(1,:)+hspts(2,:))/2d0
+  !hspts(1,:)=-(/1.1d0, 0d0, 0.0d0/) !!
+  !hspts(2,:)= (/1.1d0, 0d0, 0.0d0/) !!
+  n_p_to_p_grid=(/48/) !!
+  nkline=sum(n_p_to_p_grid)+1
+  npppt=nkline
 
-    allocate(pp_vecs(npppt,3))
-    allocate(kline(npppt))
-    call genkline(hspts,pp_vecs,kline)
+  allocate(pp_vecs(npppt,3))
+  allocate(kline(npppt))
+  call genkline(hspts,pp_vecs,kline)
 elseif(lineplotmode.eqv.(.false.)) then
-    npppt=nppx*nppy
-    allocate(pp_vecs(npppt,3))
+  npppt=nppx*nppy
+  allocate(pp_vecs(npppt,3))
 
-    origin_vec=0.66666666d0*b_1+0.33333333d0*b_2 !!
-    write(*,*) "(info) origin_vec:", origin_vec
-    width=0.06d0                               !!
-    height=0.06d0                              !!
-    call gengrid1d(origin_vec(1)-width/2d0 ,origin_vec(1)+width/2d0 ,nppx,pxg)
-    call gengrid1d(origin_vec(2)-height/2d0,origin_vec(2)+height/2d0,nppy,pyg)
-    do ipy=1,nppy
-    do ipx=1,nppx
-      pp_vecs(nppx*(ipy-1)+ipx,:)=(/pxg(ipx),pyg(ipy),0.d0/)
-    enddo
-    enddo
+  origin_vec=0.66666666d0*b_1+0.33333333d0*b_2 !!
+  width=0.06d0                               !!
+  height=0.06d0                              !!
+  call gengrid1d(origin_vec(1)-width/2d0 ,origin_vec(1)+width/2d0 ,nppx,pxg)
+  call gengrid1d(origin_vec(2)-height/2d0,origin_vec(2)+height/2d0,nppy,pyg)
+  do ipy=1,nppy
+  do ipx=1,nppx
+    pp_vecs(nppx*(ipy-1)+ipx,:)=(/pxg(ipx),pyg(ipy),0.d0/)
+  enddo
+  enddo
 endif
 !*---------------------------------------------------------------------------------------------------------
 !   define energy grid
@@ -233,7 +233,7 @@ call mpi_barrier(mpicom,ierror)
 !$OMP PRIVATE(pes_t_integral_val1,pes_t_integrand,pes_t_integrand_t_p_dt)&
 !$OMP PRIVATE(dipole_mat_el, greater_mat_el, greater_dagger_mat_el, lesser_mat_el)&
 !$OMP PRIVATE(u_mat_lesser,u_mat_greater,u_mat_greater_dagger)&
-!$OMP PRIVATE(u_mat_evolver_lesser,u_mat_evolver_greater)&
+!$OMP PRIVATE(u_mat_evolver_lesser,u_mat_evolver_greater,u_mat_evolver_nint)&
 !$OMP PRIVATE(temp_cmat_lesser,temp_cmat_greater,temp_col_vec_lesser)&
 !$OMP PRIVATE(hk_t_lesser,hk_t_greater,hk_pw)&
 !$OMP PRIVATE(u_mat_l_lesser,u_mat_r_lesser,u_mat_l_greater,u_mat_r_greater)&
@@ -251,8 +251,6 @@ eigvals=0d0
 u_mat_evolver_lesser=c0
 theta_arg_p_t=c0
 
-
-
 !$OMP DO
 do ip=1,nppt
   if (mod(ip-1,np_mpi).ne.lp_mpi) cycle
@@ -268,21 +266,22 @@ do ip=1,nppt
   do ig=1,ngpt
   !do ig=igc,igc
     g_vec=g_vecs(ig,:)
-    if (sum(p_vec**2)-sum((pp_vec+g_vec)**2).ge.0d0) ngpt2=ngpt2+1
+    !if (sum(p_vec**2)-sum((pp_vec+g_vec)**2).ge.0d0) then
+    ngpt2=ngpt2+1
+    !endif
   enddo
-  write(*,*) "(info) ngpt2:", ngpt2
   allocate(set_ig(ngpt2))
   i=1
   do ig=1,ngpt
   !do ig=igc,igc
-    if (sum(p_vec**2)-sum((pp_vec+g_vec)**2).ge.0d0) then
+    !if (sum(p_vec**2)-sum((pp_vec+g_vec)**2).ge.0d0) then
       set_ig(i)=ig
       if (ig.eq.igc) igc2=i
       i=i+1
-    endif
+    !endif
   enddo
   !*-------------------------------------------------------
-  npzpt=201
+  npzpt=57
   ns=ngpt2*npzpt
   !*-------------------------------------------------------
   ! allocate memories for variables depends on ns
@@ -298,6 +297,7 @@ do ip=1,nppt
   allocate(u_mat_l_greater(ns,ns))
   allocate(u_mat_r_greater(ns,ns))
   allocate(u_mat_evolver_greater(ns,ns))
+  allocate(u_mat_evolver_nint(ns,ns))
   allocate(temp_cmat_greater(ns,ns))
   allocate(pes_t_integrand(nband))
   allocate(pes_t_integrand_t_p_dt(nband))
@@ -324,22 +324,29 @@ do ip=1,nppt
   !*-------------------------------------------------------------------------------
   !   Ground state calculation
   !*-------------------------------------------------------------------------------
+  ! Lesser
   call genhk(cmplx(pp_vec,0d0,8),temp_hamilt)
-  call genhk_pw_basis(ns,pp_vec,gpz_vecs,temp_hamilt,hk_pw)
   eigvec_mat=temp_hamilt
   call zheev('V','U',nband,eigvec_mat,nband,eigvals,work,lwork,rwork,lainfo)
+  ! Greater
+  call genhk_pw_basis(ns,pp_vec,gpz_vecs,temp_hamilt,hk_pw)
+  u_mat_r_greater=identity_greater-ci*(dt/2d0)*hk_pw
+  u_mat_l_greater=identity_greater+ci*(dt/2d0)*hk_pw
+  call zgetrf(ns,ns,u_mat_l_greater,ns,ipiv_greater,info)
+  call zgetri(ns,u_mat_l_greater,ns,ipiv_greater,work_greater,ns,info)
+  call zgemm('n','n',ns,ns,ns,c1,u_mat_l_greater,ns,u_mat_r_greater,ns,c0,u_mat_evolver_nint,ns)
   !*-------------------------------------------------------------------------------
   !   normalization and gauge setting of groundstates
   !*-------------------------------------------------------------------------------
-    do i=1,nband
-    normalizer=0d0
-    do j=1,nband
-    normalizer=normalizer+dble(eigvec_mat(j,i))**2+aimag(eigvec_mat(j,i))**2
-    enddo
-    normalizer=dsqrt(normalizer)
-    eigvec_mat(:,i)=eigvec_mat(:,i)/normalizer
-    eigvec_mat(:,i)=eigvec_mat(:,i)/eigvec_mat(1,i)*dsqrt(dble(eigvec_mat(1,i))**2+aimag(eigvec_mat(1,i))**2)
-    enddo
+  do i=1,nband
+  normalizer=0d0
+  do j=1,nband
+  normalizer=normalizer+dble(eigvec_mat(j,i))**2+aimag(eigvec_mat(j,i))**2
+  enddo
+  normalizer=dsqrt(normalizer)
+  eigvec_mat(:,i)=eigvec_mat(:,i)/normalizer
+  eigvec_mat(:,i)=eigvec_mat(:,i)/eigvec_mat(1,i)*dsqrt(dble(eigvec_mat(1,i))**2+aimag(eigvec_mat(1,i))**2)
+  enddo
   !*-----INITIALIZATION OF U(t,t0)--------------------------
   u_mat_lesser=identity_lesser
   u_mat_greater=identity_greater
@@ -352,12 +359,7 @@ do ip=1,nppt
   !*---------------------------------------------------------
   call init_theta_arg_vec(ns,pp_vec,gpz_vecs,theta_arg_vec)
   do it=1,it_observe-1
-  call u_transform(ns,theta_arg_vec,hk_pw,hk_t_greater) !!!
-  u_mat_r_greater=identity_greater-ci*(dt/2d0)*hk_t_greater
-  u_mat_l_greater=identity_greater+ci*(dt/2d0)*hk_t_greater
-  call zgetrf(ns,ns,u_mat_l_greater,ns,ipiv_greater,info)
-  call zgetri(ns,u_mat_l_greater,ns,ipiv_greater,work_greater,ns,info)
-  call zgemm('n','n',ns,ns,ns,c1,u_mat_l_greater,ns,u_mat_r_greater,ns,c0,u_mat_evolver_greater,ns)
+  call u_transform(ns,theta_arg_vec,u_mat_evolver_nint,u_mat_evolver_greater) !!!
   call zgemm('n','n',ns,ns,ns,c1,u_mat_evolver_greater,ns,u_mat_greater,ns,c0,temp_cmat_greater,ns)
   u_mat_greater=temp_cmat_greater
   call evolve_theta_arg_vec(ns,2*it,pp_vec,gpz_vecs,theta_arg_vec)
@@ -372,7 +374,7 @@ do ip=1,nppt
   !*------------------------------------------------------------------------
   call init_theta_arg_vec(ns,pp_vec,gpz_vecs,theta_arg_vec)
   do it=1,it_observe-1
-  call genhk(cmplx(pp_vec,0d0,8)-pump(2*it,:)/sol,hk_t_lesser)
+  call genhk(cmplx(pp_vec-pump(2*it,:)/sol,0d0,8),hk_t_lesser)
   u_mat_r_lesser=identity_lesser-ci*(dt/2d0)*hk_t_lesser
   u_mat_l_lesser=identity_lesser+ci*(dt/2d0)*hk_t_lesser
   call zgetrf(nband,nband,u_mat_l_lesser,nband,ipiv_lesser,info)
@@ -381,12 +383,7 @@ do ip=1,nppt
   call zgemm('n','n',nband,nband,nband,c1,u_mat_evolver_lesser,nband,u_mat_lesser,nband,c0,temp_cmat_lesser,nband)
   u_mat_lesser=temp_cmat_lesser
 
-  call u_transform(ns,theta_arg_vec,hk_pw,hk_t_greater) !!!
-  u_mat_r_greater=identity_greater-ci*(dt/2d0)*hk_t_greater
-  u_mat_l_greater=identity_greater+ci*(dt/2d0)*hk_t_greater
-  call zgetrf(ns,ns,u_mat_l_greater,ns,ipiv_greater,info)
-  call zgetri(ns,u_mat_l_greater,ns,ipiv_greater,work_greater,ns,info)
-  call zgemm('n','n',ns,ns,ns,c1,u_mat_l_greater,ns,u_mat_r_greater,ns,c0,u_mat_evolver_greater,ns)
+  call u_transform(ns,theta_arg_vec,u_mat_evolver_nint,u_mat_evolver_greater) !!!
   u_mat_evolver_greater=transpose(conjg(u_mat_evolver_greater))
   call zgemm('n','n',ns,ns,ns,c1,u_mat_greater,ns,u_mat_evolver_greater,ns,c0,temp_cmat_greater,ns)
   u_mat_greater=temp_cmat_greater
@@ -398,24 +395,20 @@ do ip=1,nppt
   !*------------------------------------------------------------------------------------------------------------------------
   do in=1,nband
   do inp=1,nband
-     lesser_mat_el=c0
      call zgemv('N', nband, nband, c1, u_mat_lesser, nband, eigvec_mat(:,in), 1, c0, temp_col_vec_lesser, 1)
-     do i=1,nband
-     lesser_mat_el=lesser_mat_el+conjg(eigvec_mat(i,inp))*temp_col_vec_lesser(i)
-     enddo
+     lesser_mat_el=sum(conjg(eigvec_mat(:,inp))*temp_col_vec_lesser)
   do igpz1=1,ns
      p1_vec=pp_vec+gpz_vecs(igpz1,:)
-     theta_p_t=(dcos(dble(theta_arg_vec(igpz1)))+ci*dsin(dble(theta_arg_vec(igpz1))))*dexp(-aimag(theta_arg_vec(igpz1)))
+     theta_p_t=cdexp(ci*theta_arg_vec(igpz1))
      dipole_mat_el=pw_coeff_bloch(pp_vec,(/gpz_vecs(igpz1,1),gpz_vecs(igpz1,2),0d0/),gpz_vecs(igpz1,3),eigvec_mat(:,inp))*&
-     (probe(2*it+1,1)*p1_vec(1)+probe(2*it+1,2)*p1_vec(2)+probe(2*it+1,3)*p1_vec(3))
+     sum(probe(2*it+1,:)*p1_vec)
      
-     pes_t_integrand_t_p_dt(in)=pes_t_integrand_t_p_dt(in)&
-                               +theta_p_t*u_mat_greater(igpzc,igpz1)*dipole_mat_el*lesser_mat_el
-  enddo !do for p1
-  enddo !do for band index n'
+     pes_t_integrand_t_p_dt(in)=pes_t_integrand_t_p_dt(in)+theta_p_t*u_mat_greater(igpzc,igpz1)*dipole_mat_el*lesser_mat_el
+  enddo
+  enddo
      pes_t_integral_val1(in)=pes_t_integral_val1(in)+dt/2d0*(pes_t_integrand(in)+pes_t_integrand_t_p_dt(in))
      pes_t_integrand(in)=pes_t_integrand_t_p_dt(in)
-  enddo !do for band index n
+  enddo
   !*------------------------------------------------------------------------------------------------------------------------
   call evolve_theta_arg_vec(ns,2*it+1,pp_vec,gpz_vecs,theta_arg_vec)
   !*------------------------------------------------------------------------------------------------------------------------
@@ -434,6 +427,7 @@ deallocate(u_mat_greater_dagger)
 deallocate(u_mat_l_greater)
 deallocate(u_mat_r_greater)
 deallocate(u_mat_evolver_greater)
+deallocate(u_mat_evolver_nint)
 deallocate(identity_greater)
 deallocate(temp_cmat_greater)
 deallocate(pes_t_integral_val1)
@@ -514,3 +508,15 @@ include 'phi_p.f90'
 include 'pw_coeff_bloch.f90'
 end program
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! inverse matrix calculation
+  !call u_transform(ns,theta_arg_vec,hk_pw,hk_t_greater)
+  !u_mat_r_greater=identity_greater-ci*(dt/2d0)*hk_t_greater
+  !u_mat_l_greater=identity_greater+ci*(dt/2d0)*hk_t_greater
+  !call zgetrf(ns,ns,u_mat_l_greater,ns,ipiv_greater,info)
+  !call zgetri(ns,u_mat_l_greater,ns,ipiv_greater,work_greater,ns,info)
+  !call zgemm('n','n',ns,ns,ns,c1,u_mat_l_greater,ns,u_mat_r_greater,ns,c0,u_mat_evolver_greater,ns)
+     !do i=1,nband
+     !lesser_mat_el=lesser_mat_el+conjg(eigvec_mat(i,inp))*temp_col_vec_lesser(i)
+     !enddo
+     !theta_p_t=(dcos(dble(theta_arg_vec(igpz1)))+ci*dsin(dble(theta_arg_vec(igpz1))))*dexp(-aimag(theta_arg_vec(igpz1)))
+     !(probe(2*it+1,1)*p1_vec(1)+probe(2*it+1,2)*p1_vec(2)+probe(2*it+1,3)*p1_vec(3))

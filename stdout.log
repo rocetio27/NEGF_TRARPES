@@ -1,0 +1,1072 @@
+ (info) origin_vec:  0.90106197358380535        0.0000000000000000        0.0000000000000000     
+ (info) origin_vec:  0.90106197358380535        0.0000000000000000        0.0000000000000000     
+ (info) origin_vec:  0.90106197358380535        0.0000000000000000        0.0000000000000000     
+ (info) origin_vec:  0.90106197358380535        0.0000000000000000        0.0000000000000000     
+ nkline:          49
+ nenrg:          30
+ nkline:          49
+ nenrg:          30
+ nkline:          49
+ nenrg:          30
+ nkline:          49
+ nenrg:          30
+ nppt:        1470
+ nppt:        1470
+ nppt:        1470
+ nppt:        1470
+ (info) ip:           1           0           4
+ (info) ip:         861           4           4
+ (info) ip:        1045           4           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         497           4           4
+ (info) ngpt2:           9
+ (info) ip:         249           4           4
+ (info) ngpt2:           9
+ (info) ip:        1413           4           4
+ (info) ngpt2:           9
+ (info) ip:         189           4           4
+ (info) ngpt2:           9
+ (info) ip:         985           4           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1105           5           4
+ (info) ip:         681           9           4
+ (info) ip:         125           6           4
+ (info) ip:         373          21           4
+ (info) ip:        1349          21           4
+ (info) ngpt2:           9
+ (info) ip:         557          21           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:          65           1           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         925           1           4
+ (info) ngpt2:           9
+ (info) ip:         617           1           4
+ (info) ngpt2:           9
+ (info) ip:         741           1           4
+ (info) ngpt2:           9
+ (info) ip:        1289           1           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:           4           0           4
+ (info) ngpt2:           9
+ (info) ip:        1229           1           4
+ (info) ngpt2:           9
+ (info) ip:        1290          16           4
+ (info) ip:        1106          18           4
+ (info) ip:         437           1           4
+ (info) ip:        1169           1           4
+ (info) ip:        1046          18           4
+ (info) ngpt2:           9
+ (info) ip:          66          18           4
+ (info) ip:         801           1           4
+ (info) ngpt2:           9
+ (info) ip:         314          18           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         313           1           4
+ (info) ngpt2:           9
+ (info) ip:         922          18           4
+ (info) ip:           3           6           4
+ (info) ngpt2:           9
+ (info) ip:         558           8           4
+ (info) ngpt2:           9
+ (info) ip:        1350          22           4
+ (info) ip:         252           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         862          22           4
+ (info) ngpt2:           9
+ (info) ip:         127           2           4
+ (info) ngpt2:           9
+ (info) ip:        1166          22           4
+ (info) ngpt2:           9
+ (info) ip:         618          22           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         434          22           4
+ (info) ngpt2:           9
+ (info) ip:         678          22           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:           2          22           4
+ (info) ngpt2:           9
+ (info) ip:        1291           2           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         126          22           4
+ (info) ip:         376           9           4
+ (info) ip:         375           2           4
+ (info) ngpt2:           9
+ (info) ip:         188          20           4
+ (info) ngpt2:           9
+ (info) ip:         187           2           4
+ (info) ngpt2:           9
+ (info) ip:        1230          22           4
+ (info) ngpt2:           9
+ (info) ip:         556          20           4
+ (info) ip:          63           2           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         250          22           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1288          20           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         374          22           4
+ (info) ngpt2:           9
+ (info) ip:         498          22           4
+ (info) ngpt2:           9
+ (info) ip:         802          22           4
+ (info) ip:        1108          20           4
+ (info) ip:         311           2           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         190          22           4
+ (info) ip:         312          20           4
+ (info) ngpt2:           9
+ (info) ip:        1351           2           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1228          20           4
+ (info) ngpt2:           9
+ (info) ip:         559          18           4
+ (info) ip:         803          10           4
+ (info) ip:        1410          22           4
+ (info) ip:         984          20           4
+ (info) ngpt2:           9
+ (info) ip:        1167          15           4
+ (info) ngpt2:           9
+ (info) ip:         436          20           4
+ (info) ngpt2:           9
+ (info) ip:         983          16           4
+ (info) ngpt2:           9
+ (info) ip:         680          11           4
+ (info) ip:        1044          10           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         864           2           4
+ (info) ip:         863          16           4
+ (info) ip:         986          22           4
+ (info) ngpt2:           9
+ (info) ip:        1168          19           4
+ (info) ngpt2:           9
+ (info) ip:         739          16           4
+ (info) ip:         742          22           4
+ (info) ngpt2:           9
+ (info) ip:         620          19           4
+ (info) ngpt2:           9
+ (info) ip:         435           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1411           7           4
+ (info) ip:         924          19           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1352          19           4
+ (info) ip:         679           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:          64          19           4
+ (info) ip:        1227           7           4
+ (info) ngpt2:           9
+ (info) ip:         496          19           4
+ (info) ip:         923           7           4
+ (info) ip:         128          19           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         495           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         740          19           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1107           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1412          19           4
+ (info) ngpt2:           9
+ (info) ip:         251           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:        1047           7           4
+ (info) ngpt2:           9
+ (info) ip:         619           7           4
+ (info) ngpt2:           9
+ (info) ngpt2:           9
+ (info) ip:         800          13           4
+ (info) ngpt2:           9
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ (info) ip:        1231           7           4
+ (info) ngpt2:           9
+ (info) ip:        1051           7           4
+ (info) ngpt2:           9
+ (info) ip:        1111           7           4
+ (info) ngpt2:           9
+ (info) ip:        1232          13           4
+ (info) ngpt2:           9
+ (info) ip:         683           7           4
+ (info) ngpt2:           9
+ (info) ip:        1355           7           4
+ (info) ngpt2:           9
+ (info) ip:         563           7           4
+ (info) ngpt2:           9
+ (info) ip:         191           7           4
+ (info) ngpt2:           9
+ (info) ip:         804          13           4
+ (info) ngpt2:           9
+ (info) ip:        1356          13           4
+ (info) ngpt2:           9
+ (info) ip:         192          13           4
+ (info) ngpt2:           9
+ (info) ip:         928          13           4
+ (info) ngpt2:           9
+ (info) ip:         316          13           4
+ (info) ngpt2:           9
+ (info) ip:          67           7           4
+ (info) ngpt2:           9
+ (info) ip:         807           7           4
+ (info) ngpt2:           9
+ (info) ip:         440          13           4
+ (info) ngpt2:           9
+ (info) ip:        1416          13           4
+ (info) ngpt2:           9
+ (info) ip:         439           7           4
+ (info) ngpt2:           9
+ (info) ip:         560          13           4
+ (info) ngpt2:           9
+ (info) ip:        1048          13           4
+ (info) ngpt2:           9
+ (info) ip:         315           7           4
+ (info) ngpt2:           9
+ (info) ip:        1171           7           4
+ (info) ngpt2:           9
+ (info) ip:         132          13           4
+ (info) ngpt2:           9
+ (info) ip:         500          13           4
+ (info) ngpt2:           9
+ (info) ip:         868          13           4
+ (info) ngpt2:           9
+ (info) ip:           8          13           4
+ (info) ngpt2:           9
+ (info) ip:         988          13           4
+ (info) ngpt2:           9
+ (info) ip:        1112          13           4
+ (info) ngpt2:           9
+ (info) ip:        1172          13           4
+ (info) ngpt2:           9
+ (info) ip:        1292          13           4
+ (info) ngpt2:           9
+ (info) ip:         624          13           4
+ (info) ngpt2:           9
+ (info) ip:         499           7           4
+ (info) ngpt2:           9
+ (info) ip:         256          13           4
+ (info) ngpt2:           9
+ (info) ip:         380          13           4
+ (info) ngpt2:           9
+ (info) ip:          68          13           4
+ (info) ngpt2:           9
+ (info) ip:        1415           7           4
+ (info) ngpt2:           9
+ (info) ip:         743           7           4
+ (info) ngpt2:           9
+ (info) ip:         867           7           4
+ (info) ngpt2:           9
+ (info) ip:           6          22           4
+ (info) ngpt2:           9
+ (info) ip:         744          13           4
+ (info) ngpt2:           9
+ (info) ip:         255           7           4
+ (info) ngpt2:           9
+ (info) ip:         684          13           4
+ (info) ngpt2:           9
+ (info) ip:         623           7           4
+ (info) ngpt2:           9
+ (info) ip:         438          22           4
+ (info) ngpt2:           9
+ (info) ip:        1295           7           4
+ (info) ngpt2:           9
+ (info) ip:         806          22           4
+ (info) ngpt2:           9
+ (info) ip:           7           7           4
+ (info) ngpt2:           9
+ (info) ip:         987           7           4
+ (info) ngpt2:           9
+ (info) ip:         131           7           4
+ (info) ngpt2:           9
+ (info) ip:         254          22           4
+ (info) ngpt2:           9
+ (info) ip:        1109           1           4
+ (info) ngpt2:           9
+ (info) ip:         927           7           4
+ (info) ngpt2:           9
+ (info) ip:         377           1           4
+ (info) ngpt2:           9
+ (info) ip:          69           1           4
+ (info) ngpt2:           9
+ (info) ip:         129           1           4
+ (info) ngpt2:           9
+ (info) ip:         317           1           4
+ (info) ngpt2:           9
+ (info) ip:         502          22           4
+ (info) ngpt2:           9
+ (info) ip:        1049           1           4
+ (info) ngpt2:           9
+ (info) ip:         441           1           4
+ (info) ngpt2:           9
+ (info) ip:         379           7           4
+ (info) ngpt2:           9
+ (info) ip:         194          22           4
+ (info) ngpt2:           9
+ (info) ip:         378          22           4
+ (info) ngpt2:           9
+ (info) ip:         561           1           4
+ (info) ngpt2:           9
+ (info) ip:         989           1           4
+ (info) ngpt2:           9
+ (info) ip:          70          22           4
+ (info) ngpt2:           9
+ (info) ip:         929           1           4
+ (info) ngpt2:           9
+ (info) ip:        1353           1           4
+ (info) ngpt2:           9
+ (info) ip:         622          22           4
+ (info) ngpt2:           9
+ (info) ip:         318          22           4
+ (info) ngpt2:           9
+ (info) ip:         562          22           4
+ (info) ngpt2:           9
+ (info) ip:           5           1           4
+ (info) ngpt2:           9
+ (info) ip:         805           1           4
+ (info) ngpt2:           9
+ (info) ip:         745           1           4
+ (info) ngpt2:           9
+ (info) ip:        1233           1           4
+ (info) ngpt2:           9
+ (info) ip:         621           1           4
+ (info) ngpt2:           9
+ (info) ip:         866          22           4
+ (info) ngpt2:           9
+ (info) ip:         685           1           4
+ (info) ngpt2:           9
+ (info) ip:         193           1           4
+ (info) ngpt2:           9
+ (info) ip:         865           1           4
+ (info) ngpt2:           9
+ (info) ip:        1110          22           4
+ (info) ngpt2:           9
+ (info) ip:         253           1           4
+ (info) ngpt2:           9
+ (info) ip:        1293           1           4
+ (info) ngpt2:           9
+ (info) ip:         682          22           4
+ (info) ngpt2:           9
+ (info) ip:         990          22           4
+ (info) ngpt2:           9
+ (info) ip:         501           1           4
+ (info) ngpt2:           9
+ (info) ip:        1354          22           4
+ (info) ngpt2:           9
+ (info) ip:         130          22           4
+ (info) ngpt2:           9
+ (info) ip:         926          22           4
+ (info) ngpt2:           9
+ (info) ip:        1294          22           4
+ (info) ngpt2:           9
+ (info) ip:        1414          22           4
+ (info) ngpt2:           9
+ (info) ip:        1170          22           4
+ (info) ngpt2:           9
+ (info) ip:        1050          22           4
+ (info) ngpt2:           9
+ (info) ip:        1234          22           4
+ (info) ngpt2:           9
+ (info) ip:        1417           1           4
+ (info) ngpt2:           9
+ (info) ip:        1173           1           4
+ (info) ngpt2:           9
+ (info) ip:         746          22           4
+ (info) ngpt2:           9
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ (info) ip:        1235           7           4
+ (info) ngpt2:           9
+ (info) ip:        1115           7           4
+ (info) ngpt2:           9
+ (info) ip:         687           7           4
+ (info) ngpt2:           9
+ (info) ip:         932          13           4
+ (info) ngpt2:           9
+ (info) ip:        1055           7           4
+ (info) ngpt2:           9
+ (info) ip:         195           7           4
+ (info) ngpt2:           9
+ (info) ip:        1359           7           4
+ (info) ngpt2:           9
+ (info) ip:         443           7           4
+ (info) ngpt2:           9
+ (info) ip:          71           7           4
+ (info) ngpt2:           9
+ (info) ip:        1236          13           4
+ (info) ngpt2:           9
+ (info) ip:         811           7           4
+ (info) ngpt2:           9
+ (info) ip:         567           7           4
+ (info) ngpt2:           9
+ (info) ip:         808          13           4
+ (info) ngpt2:           9
+ (info) ip:         319           7           4
+ (info) ngpt2:           9
+ (info) ip:        1360          13           4
+ (info) ngpt2:           9
+ (info) ip:         564          13           4
+ (info) ngpt2:           9
+ (info) ip:        1052          13           4
+ (info) ngpt2:           9
+ (info) ip:        1175           7           4
+ (info) ngpt2:           9
+ (info) ip:         320          13           4
+ (info) ngpt2:           9
+ (info) ip:         444          13           4
+ (info) ngpt2:           9
+ (info) ip:         196          13           4
+ (info) ngpt2:           9
+ (info) ip:          12          13           4
+ (info) ngpt2:           9
+ (info) ip:         872          13           4
+ (info) ngpt2:           9
+ (info) ip:         504          13           4
+ (info) ngpt2:           9
+ (info) ip:        1420          13           4
+ (info) ngpt2:           9
+ (info) ip:         992          13           4
+ (info) ngpt2:           9
+ (info) ip:         136          13           4
+ (info) ngpt2:           9
+ (info) ip:         628          13           4
+ (info) ngpt2:           9
+ (info) ip:        1176          13           4
+ (info) ngpt2:           9
+ (info) ip:         260          13           4
+ (info) ngpt2:           9
+ (info) ip:        1116          13           4
+ (info) ngpt2:           9
+ (info) ip:        1296          13           4
+ (info) ngpt2:           9
+ (info) ip:         384          13           4
+ (info) ngpt2:           9
+ (info) ip:          72          13           4
+ (info) ngpt2:           9
+ (info) ip:         503           7           4
+ (info) ngpt2:           9
+ (info) ip:         748          13           4
+ (info) ngpt2:           9
+ (info) ip:         747           7           4
+ (info) ngpt2:           9
+ (info) ip:        1419           7           4
+ (info) ngpt2:           9
+ (info) ip:         688          13           4
+ (info) ngpt2:           9
+ (info) ip:         871           7           4
+ (info) ngpt2:           9
+ (info) ip:         259           7           4
+ (info) ngpt2:           9
+ (info) ip:          11           7           4
+ (info) ngpt2:           9
+ (info) ip:        1299           7           4
+ (info) ngpt2:           9
+ (info) ip:         135           7           4
+ (info) ngpt2:           9
+ (info) ip:         991           7           4
+ (info) ngpt2:           9
+ (info) ip:         627           7           4
+ (info) ngpt2:           9
+ (info) ip:         931           7           4
+ (info) ngpt2:           9
+ (info) ip:         383           7           4
+ (info) ngpt2:           9
+ (info) ip:         993           1           4
+ (info) ngpt2:           9
+ (info) ip:        1357           1           4
+ (info) ngpt2:           9
+ (info) ip:         810          22           4
+ (info) ngpt2:           9
+ (info) ip:         258          22           4
+ (info) ngpt2:           9
+ (info) ip:         321           1           4
+ (info) ngpt2:           9
+ (info) ip:         133           1           4
+ (info) ngpt2:           9
+ (info) ip:         809           1           4
+ (info) ngpt2:           9
+ (info) ip:         445           1           4
+ (info) ngpt2:           9
+ (info) ip:         689           1           4
+ (info) ngpt2:           9
+ (info) ip:         322          22           4
+ (info) ngpt2:           9
+ (info) ip:         506          22           4
+ (info) ngpt2:           9
+ (info) ip:         382          22           4
+ (info) ngpt2:           9
+ (info) ip:          73           1           4
+ (info) ngpt2:           9
+ (info) ip:         869           1           4
+ (info) ngpt2:           9
+ (info) ip:         625           1           4
+ (info) ngpt2:           9
+ (info) ip:        1113           1           4
+ (info) ngpt2:           9
+ (info) ip:        1297           1           4
+ (info) ngpt2:           9
+ (info) ip:         505           1           4
+ (info) ngpt2:           9
+ (info) ip:          10          22           4
+ (info) ngpt2:           9
+ (info) ip:        1053           1           4
+ (info) ngpt2:           9
+ (info) ip:         442          22           4
+ (info) ngpt2:           9
+ (info) ip:           9           1           4
+ (info) ngpt2:           9
+ (info) ip:         381           1           4
+ (info) ngpt2:           9
+ (info) ip:         870          22           4
+ (info) ngpt2:           9
+ (info) ip:        1054          22           4
+ (info) ngpt2:           9
+ (info) ip:         930          22           4
+ (info) ngpt2:           9
+ (info) ip:         933           1           4
+ (info) ngpt2:           9
+ (info) ip:        1358          22           4
+ (info) ngpt2:           9
+ (info) ip:         686          22           4
+ (info) ngpt2:           9
+ (info) ip:        1298          22           4
+ (info) ngpt2:           9
+ (info) ip:          74          22           4
+ (info) ngpt2:           9
+ (info) ip:         565           1           4
+ (info) ngpt2:           9
+ (info) ip:         566          22           4
+ (info) ngpt2:           9
+ (info) ip:         257           1           4
+ (info) ngpt2:           9
+ (info) ip:         626          22           4
+ (info) ngpt2:           9
+ (info) ip:        1238          22           4
+ (info) ngpt2:           9
+ (info) ip:         749           1           4
+ (info) ngpt2:           9
+ (info) ip:        1114          22           4
+ (info) ngpt2:           9
+ (info) ip:         198          22           4
+ (info) ngpt2:           9
+ (info) ip:        1237           1           4
+ (info) ngpt2:           9
+ (info) ip:        1418          22           4
+ (info) ngpt2:           9
+ (info) ip:         134          22           4
+ (info) ngpt2:           9
+ (info) ip:         994          22           4
+ (info) ngpt2:           9
+ (info) ip:         197           1           4
+ (info) ngpt2:           9
+ (info) ip:        1174          22           4
+ (info) ngpt2:           9
+ (info) ip:        1177           1           4
+ (info) ngpt2:           9
+ (info) ip:         750          22           4
+ (info) ngpt2:           9
+ (info) ip:        1421           1           4
+ (info) ngpt2:           9
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ check1
+ (info) ip:        1119           7           4
+ (info) ngpt2:           9
+ (info) ip:        1239           7           4
+ (info) ngpt2:           9
+ (info) ip:         691           7           4
+ (info) ngpt2:           9
+ (info) ip:         936          13           4
+ (info) ngpt2:           9
+ (info) ip:         815           7           4
+ (info) ngpt2:           9
+ (info) ip:         199           7           4
+ (info) ngpt2:           9
+ (info) ip:         447           7           4
+ (info) ngpt2:           9
+ (info) ip:        1059           7           4
+ (info) ngpt2:           9
+ (info) ip:          75           7           4
+ (info) ngpt2:           9
+ (info) ip:        1363           7           4
+ (info) ngpt2:           9
+ (info) ip:         571           7           4
+ (info) ngpt2:           9
+ (info) ip:         323           7           4
+ (info) ngpt2:           9
+ (info) ip:        1179           7           4
+ (info) ngpt2:           9
+ (info) ip:         812          13           4
+ (info) ngpt2:           9
+ (info) ip:        1240          13           4
+ (info) ngpt2:           9
+ (info) ip:          16          13           4
+ (info) ngpt2:           9
+ (info) ip:        1424          13           4
+ (info) ngpt2:           9
+ (info) ip:         876          13           4
+ (info) ngpt2:           9
+ (info) ip:         508          13           4
+ (info) ngpt2:           9
+ (info) ip:        1364          13           4
+ (info) ngpt2:           9
+ (info) ip:         568          13           4
+ (info) ngpt2:           9
+ (info) ip:        1056          13           4
+ (info) ngpt2:           9
+ (info) ip:         996          13           4
+ (info) ngpt2:           9
+ (info) ip:         140          13           4
+ (info) ngpt2:           9
+ (info) ip:         200          13           4
+ (info) ngpt2:           9
+ (info) ip:         448          13           4
+ (info) ngpt2:           9
+ (info) ip:         388          13           4
+ (info) ngpt2:           9
+ (info) ip:         324          13           4
+ (info) ngpt2:           9
+ (info) ip:         632          13           4
+ (info) ngpt2:           9
+ (info) ip:         264          13           4
+ (info) ngpt2:           9
+ (info) ip:        1300          13           4
+ (info) ngpt2:           9
+ (info) ip:        1120          13           4
+ (info) ngpt2:           9
+ (info) ip:          76          13           4
+ (info) ngpt2:           9
+ (info) ip:        1180          13           4
+ (info) ngpt2:           9
+ (info) ip:         752          13           4
+ (info) ngpt2:           9
+ (info) ip:         751           7           4
+ (info) ngpt2:           9
+ (info) ip:         507           7           4
+ (info) ngpt2:           9
+ (info) ip:        1423           7           4
+ (info) ngpt2:           9
+ (info) ip:         692          13           4
+ (info) ngpt2:           9
+ (info) ip:         875           7           4
+ (info) ngpt2:           9
+ (info) ip:        1303           7           4
+ (info) ngpt2:           9
+ (info) ip:         263           7           4
+ (info) ngpt2:           9
+ (info) ip:          15           7           4
+ (info) ngpt2:           9
+ (info) ip:         995           7           4
+ (info) ngpt2:           9
+ (info) ip:         139           7           4
+ (info) ngpt2:           9
+ (info) ip:         631           7           4
+ (info) ngpt2:           9
+ (info) ip:         935           7           4
+ (info) ngpt2:           9
+ (info) ip:         387           7           4
+ (info) ngpt2:           9
+ (info) ip:         325           1           4
+ (info) ngpt2:           9
+ (info) ip:         326          22           4
+ (info) ngpt2:           9
+ (info) ip:         813           1           4
+ (info) ngpt2:           9
+ (info) ip:         814          22           4
+ (info) ngpt2:           9
+ (info) ip:          77           1           4
+ (info) ngpt2:           9
+ (info) ip:         262          22           4
+ (info) ngpt2:           9
+ (info) ip:          13           1           4
+ (info) ngpt2:           9
+ (info) ip:         693           1           4
+ (info) ngpt2:           9
+ (info) ip:         449           1           4
+ (info) ngpt2:           9
+ (info) ip:         997           1           4
+ (info) ngpt2:           9
+ (info) ip:         937           1           4
+ (info) ngpt2:           9
+ (info) ip:         934          22           4
+ (info) ngpt2:           9
+ (info) ip:        1057           1           4
+ (info) ngpt2:           9
+ (info) ip:         385           1           4
+ (info) ngpt2:           9
+ (info) ip:        1361           1           4
+ (info) ngpt2:           9
+ (info) ip:        1302          22           4
+ (info) ngpt2:           9
+ (info) ip:          14          22           4
+ (info) ngpt2:           9
+ (info) ip:         874          22           4
+ (info) ngpt2:           9
+ (info) ip:         446          22           4
+ (info) ngpt2:           9
+ (info) ip:         629           1           4
+ (info) ngpt2:           9
+ (info) ip:         202          22           4
+ (info) ngpt2:           9
+ (info) ip:         510          22           4
+ (info) ngpt2:           9
+ (info) ip:         386          22           4
+ (info) ngpt2:           9
+ (info) ip:        1242          22           4
+ (info) ngpt2:           9
+ (info) ip:        1117           1           4
+ (info) ngpt2:           9
+ (info) ip:         569           1           4
+ (info) ngpt2:           9
+ (info) ip:        1118          22           4
+ (info) ngpt2:           9
+ (info) ip:        1058          22           4
+ (info) ngpt2:           9
+ (info) ip:        1241           1           4
+ (info) ngpt2:           9
+ (info) ip:          78          22           4
+ (info) ngpt2:           9
+ (info) ip:         690          22           4
+ (info) ngpt2:           9
+ (info) ip:         873           1           4
+ (info) ngpt2:           9
+ (info) ip:        1362          22           4
+ (info) ngpt2:           9
+ (info) ip:         570          22           4
+ (info) ngpt2:           9
+ (info) ip:         261           1           4
+ (info) ngpt2:           9
+ (info) ip:        1301           1           4
+ (info) ngpt2:           9
+ (info) ip:         137           1           4
+ (info) ngpt2:           9
+ (info) ip:         138          22           4
+ (info) ngpt2:           9
+ (info) ip:        1422          22           4
+ (info) ngpt2:           9
+ (info) ip:         201           1           4
+ (info) ngpt2:           9
+ (info) ip:         754          22           4
+ (info) ngpt2:           9
+ (info) ip:         509           1           4
+ (info) ngpt2:           9
+ (info) ip:         630          22           4
+ (info) ngpt2:           9
+ (info) ip:         753           1           4
+ (info) ngpt2:           9
+ (info) ip:         998          22           4
+ (info) ngpt2:           9
+ (info) ip:        1178          22           4
+ (info) ngpt2:           9
+ (info) ip:        1425           1           4
+ (info) ngpt2:           9
+ (info) ip:        1181           1           4
+ (info) ngpt2:           9

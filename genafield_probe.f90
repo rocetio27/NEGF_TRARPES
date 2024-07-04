@@ -7,7 +7,7 @@ integer it
 real(8)    :: t,t1,t3
 complex(8) :: t2
 complex(8) :: shape_func
-complex(8), intent(inout) :: probetmp(exitmax,3)
+real(8), intent(inout) :: probetmp(exitmax,3)
 complex(8), intent(inout) :: profile(exitmax)
 
 if(w_probe.lt.0d0) then
@@ -25,7 +25,7 @@ do it=1,exitmax
   if ((abs(t1).ge.hd_probe)) shape_func=0d0
   if (abs(shape_func).lt.1.d-20) shape_func=0d0
   !define vector field
-  probetmp(it,:)=cmplx(dble(pol_vec_probe*field_intensity_probe*shape_func),0d0)
+  probetmp(it,:)=dble(pol_vec_probe*field_intensity_probe*shape_func)
   profile(it)=field_intensity_probe*shape_func
 enddo
 end subroutine
