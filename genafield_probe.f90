@@ -1,4 +1,4 @@
-subroutine genafield_probe(probetmp,profile)
+subroutine genafield_probe(probetmp,probetmp_conjg,profile)
 use modmain
 use modconstants
 use modpulse
@@ -8,6 +8,7 @@ real(8)    :: t,t1,t3
 complex(8) :: t2
 complex(8) :: shape_func
 real(8), intent(inout) :: probetmp(exitmax,3)
+real(8), intent(inout) :: probetmp_conjg(exitmax,3)
 complex(8), intent(inout) :: profile(exitmax)
 
 if(w_probe.lt.0d0) then
@@ -26,6 +27,7 @@ do it=1,exitmax
   if (abs(shape_func).lt.1.d-20) shape_func=0d0
   !define vector field
   probetmp(it,:)=dble(pol_vec_probe*field_intensity_probe*shape_func)
+  probetmp_conjg(it,:)=dble(conjg(pol_vec_probe)*field_intensity_probe*shape_func)
   profile(it)=field_intensity_probe*shape_func
 enddo
 end subroutine

@@ -4,7 +4,9 @@ implicit none
 real(8) :: t_pump_start
 real(8) :: t_probe_start
 real(8) :: t_pump_end
+real(8) :: t_probe_end
 real(8) :: t_error
+real(8) :: t_observe
 integer :: exitmax
 integer :: itmax
 real(8) :: dt=0.1d0
@@ -23,23 +25,25 @@ real(8), parameter :: e_to_v_pump=eV/astr*137/w_pump ! E-field(eV/astr) to A-fie
 real(8), parameter :: field_intensity_pump=0.005d0*e_to_v_pump
 complex(8), parameter :: pol_vec_pump(3)=p_pol
 real(8), parameter :: phase_pump=0d0
-real(8), parameter :: hd_pump=20*fs ! half-duration
+real(8), parameter :: hd_pump=100*fs ! half-duration
+logical :: ordinary_pes_status
 
 !integer, parameter :: min_time_step_pump=20
 !real(8), parameter :: t_period_pump=2d0*pi/w_pump
 !real(8), parameter :: dt_pump=t_period_pump/min_time_step_pump
 
-real(8), parameter :: w_probe=30*eV
+real(8), parameter :: w_probe=35*eV
 real(8), parameter :: e_to_v_probe=eV/astr*137/w_probe ! E-field to A-field unit conversion factor
 real(8), parameter :: field_intensity_probe=0.00005d0*e_to_v_probe
-complex(8), parameter :: pol_vec_probe(3)=p_pol
+complex(8), parameter :: pol_vec_probe(3)=lcp_pol
 real(8), parameter :: phase_probe=0d0
 real(8), parameter :: hd_probe=20*fs ! half-duration
+logical :: circular_probe_status
 
 real(8) :: delta_t=0*fs ! delta_t=probe pusle center - pump pulse center
 real(8) :: tshift=0d0
 
-real(8), allocatable :: pump(:,:)      ,probe(:,:)       !timeindex,vectorindex
+real(8), allocatable :: pump(:,:)      ,probe(:,:), probe_conjg(:,:)       !timeindex,vectorindex
 complex(8), allocatable :: pump_profile(:),probe_profile(:) !timeindex,vectorindex
 real(8)   , allocatable :: e_pump(:,:)    ,e_probe(:,:)     !timeindex,vectorindex
 end module

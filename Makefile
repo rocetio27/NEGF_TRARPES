@@ -14,7 +14,8 @@ SRC_sub = \
  gengrid1d.f90 \
  nf.f90 phi_p.f90 hpp.f90 pw_coeff_bloch.f90\
  genhk_pw_basis.f90 u_transform.f90\
- evolve_theta_arg_vec.f90 init_theta_arg_vec.f90
+ evolve_theta_arg_vec.f90 init_theta_arg_vec.f90\
+ reverse_theta_arg_vec.f90
 
 SRC = $(SRC_modules) $(SRC_main) $(SRC_sub)
 OBJ = $(SRC:.f90=.o)

@@ -32,7 +32,7 @@ real(8), allocatable :: rwork(:)
 ! PARAMETERS FOR Hamiltonian
 integer, parameter   :: natom=2
 real(8), parameter   :: atomic_nums(natom)=6d0
-real(8), parameter   :: mu(natom)=0.6d0
+real(8), parameter   :: mu(natom)=2.1d0
 real(8)              :: atom_pos(natom,3)
 integer              :: norb_per_atom(0:natom)
 integer              :: norb ! initialized in main.f90
@@ -46,7 +46,7 @@ integer              :: nband
 ! PARAMETERS FOR PES CAL
 integer, parameter :: iorbstart=1
 logical :: lineplotmode=.true.
-integer, parameter :: nppx=45, nppy=45, nenrg=30
+integer, parameter :: nppx=41, nppy=41, nenrg=31
 
 !G-vector parameters
 integer, parameter :: ngmax=1
@@ -54,6 +54,11 @@ integer, parameter :: ngtotax=2*ngmax+1
 integer, parameter :: ngpt=ngtotax**2
 integer, parameter :: igc=(ngpt-1)/2+1 !center index of g-vecs
 real(8) :: g_vecs(ngpt,3)
+
+!pz-grid paramters
+integer, parameter :: m_for_pz_max=3     ! From this, pz_max will be determined in the main code as (pz_max=m/2*pz)
+integer, parameter :: n_pz_half_grid=100 ! npzpt = 2*m*k + 1
+integer, parameter :: npzpt=2*n_pz_half_grid*m_for_pz_max+1
 
 !integer, parameter :: ipzc=(npzpt-1)/2+1 !center index of pz-vecs
 
